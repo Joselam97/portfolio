@@ -127,8 +127,8 @@ export default function HomeComponent() {
                   <a
                     href="/CV_JoseAlvarez.pdf"
                     download="CV_JoseAlvarez.pdf"
-                    className={`ml-10 cursor-pointer inline-block bg-[#01161e] transition-all duration-300 ease-in-out rounded-lg text-white py-3 px-5 font-bold mt-8 uppercase
-                            md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-[#d90429] hover:show-lg transform hover:translate-y-1 ${hind.className}`}
+                    className={`ml-10 cursor-pointer inline-block bg-[#d90429] transition-all duration-300 ease-in-out rounded-lg text-white py-3 px-5 font-bold mt-8 uppercase
+                            md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-[#01161e] hover:show-lg transform hover:translate-y-1 ${hind.className}`}
                   >
                     My Resume
                   </a>
@@ -145,15 +145,18 @@ export default function HomeComponent() {
             <div className="px-3">
                 <div className="relative max-w-sm bottom-[70px] md:max-w-5xl xl:max-w-6xl px-5 lg:px-14 overflow:auto mx-auto bg-white rounded-2xl z-20 "
                 style={{
-                    boxShadow: "#d90429 -10px 25px 50px 10px"
+                    boxShadow: "#01161e -10px 25px 50px 10px"
                 }}>
-                    <div className="lg:py-10 md:py-6 sm:py-6 cursor-all-scroll">
+                    <div className="lg:py-5 md:py-6 sm:py-6 cursor-all-scroll">
                         <Slider {...settings}>
-                        <img src='/mongodb.png' alt="mongodb" className="h-12"/>
-                        <img src='/reactjs.png' alt="reactjs" className="h-12"/>
+                        <img src='/JavaScript.png' alt="javascript" className="h-12"/>
+                        <img src='/html.png' alt="html" className="h-12"/>
+                        <img src='/css.png' alt="css" className="h-12"/>
                         <img src='/nextjs.png' alt="nextjs" className="h-12"/>
-                        <img src='/docker.png' alt="docker" className="h-12"/>
-                        <img src='/expressjs.png' alt="expressjs" className="h-12"/>
+                        <img src='/java.png' alt="java" className="h-12"/>
+                        <img src='/python.png' alt="python" className="h-12"/>
+                        <img src='/oracle.png' alt="oracle" className="h-12"/>
+                        <img src='/mysql.png' alt="mysql" className="h-12"/>
                         </Slider>
                     </div>
                 </div>
