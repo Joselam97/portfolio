@@ -10,7 +10,7 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
         <div
           className={`z-50 ${
             pathname === "/" ? "top-[0px]" : "top-[100px]"
-          } cursor-pointer fixed w-14 h-14 lg:w-20 lg:h-20 bg-[#d90429] flex justify-center items-center rounded-br-3xl`}
+          } cursor-pointer fixed w-14 h-14 lg:w-24 lg:h-24 bg-[#d90429] flex justify-center items-center rounded-br-3xl`}
         >
           <div onClick={() => setIsOpen(false)} className="relative w-7 lg:w-10 h-7 lg:h-10 flex justify-center items-center">
             {isOpen ? (
@@ -39,7 +39,7 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
                     <a
                       href="/#home"
                       onClick={() => {
-                        setSelectedIndex1(0);
+                        setSelectedIndex1(1);
                         setIsOpen(false);
                       }}
                     >
@@ -65,37 +65,11 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
                     <a
                       href="/#portfolio"
                       onClick={() => {
-                        setSelectedIndex1(1);
-                        setIsOpen(false);
-                      }}
-                    >
-                      Portfolio
-                    </a>
-                    {selectedIndex1 === 1 ? (
-                      <div
-                        className="absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100
-                      bg-[#d90429] rounded-xl -z-10"
-                      ></div>
-                    ) : (
-                      ""
-                    )}
-                    <div
-                      className="absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 rotate-0 opacity-0 group-hover:-rotate-6 group-hover:opacity-100
-                      bg-[#d90429] rounded-xl -z-10"
-                    ></div>
-                  </div>
-                </li>
-
-                <li className="group my-4 xl:my-4 2xl:my-6 relative flex items-center justify-center">
-                  <div className="inline-block relative">
-                    <a
-                      href="/#about-me-component"
-                      onClick={() => {
                         setSelectedIndex1(2);
                         setIsOpen(false);
                       }}
                     >
-                      About Me
+                      Portfolio
                     </a>
                     {selectedIndex1 === 2 ? (
                       <div
@@ -115,15 +89,41 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
                 <li className="group my-4 xl:my-4 2xl:my-6 relative flex items-center justify-center">
                   <div className="inline-block relative">
                     <a
-                      href="/#hire-me"
+                      href="/#about-me-component"
                       onClick={() => {
                         setSelectedIndex1(3);
                         setIsOpen(false);
                       }}
                     >
-                      Hire Me
+                      About Me
                     </a>
                     {selectedIndex1 === 3 ? (
+                      <div
+                        className="absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100
+                      bg-[#d90429] rounded-xl -z-10"
+                      ></div>
+                    ) : (
+                      ""
+                    )}
+                    <div
+                      className="absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 rotate-0 opacity-0 group-hover:-rotate-6 group-hover:opacity-100
+                      bg-[#d90429] rounded-xl -z-10"
+                    ></div>
+                  </div>
+                </li>
+
+                <li className="group my-4 xl:my-4 2xl:my-6 relative flex items-center justify-center">
+                  <div className="inline-block relative">
+                    <a
+                      href="/#hire-me"
+                      onClick={() => {
+                        setSelectedIndex1(4);
+                        setIsOpen(false);
+                      }}
+                    >
+                      Hire Me
+                    </a>
+                    {selectedIndex1 === 4 ? (
                       <div
                         className="absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100
                       bg-[#d90429] rounded-xl -z-10"

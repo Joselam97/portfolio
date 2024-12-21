@@ -118,11 +118,11 @@ export default function HomeComponent() {
                   <p className={`text-[#d90429] text-3xl md:text-base lg:text-2xl ${hind.className}`}>Hi There!</p>
                   <h1 className="text-[#01161e] font-recoletaBlack text-5xl md:text-5xl lg:text-7xl xl:text-7xl mt-5 md:mt-3">I'm Jose Alvarez</h1>
                   <h2 className={`text-[#01161e] py-2 font-bold uppercase md:text-xl ${hind.className}`}>Computer Engineer & Passionate Programmer</h2>
-                  <a /* href="/#portfolio" */
+                  <a href="https://github.com/Joselam97" target="_blank" rel="noopener noreferrer" 
                     className={`cursor-pointer inline-block bg-[#d90429] transition-all duration-300 ease-in-out rounded-lg text-white py-3 px-5 font-bold mt-8 uppercase
                             md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-[#01161e] hover:show-lg transform hover:translate-y-1 ${hind.className}`}
                   >
-                    Projects
+                    github 
                   </a>
                   <a
                     href="/CV_JoseAlvarez.pdf"
