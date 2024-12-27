@@ -2,8 +2,13 @@ import React from "react";
 import { useRouter, usePathname } from "next/navigation";
 
 export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setSelectedIndex1 }) {
+
   const route = useRouter();
   const pathname = usePathname();
+  const handleMouseLeave = () => {
+    setSelectedIndex1(null); 
+  };
+
   return (
     <React.Fragment>
       <div className="relative">
@@ -39,9 +44,11 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
                     <a
                       href="/#home"
                       onClick={() => {
+                        
                         setSelectedIndex1(1);
                         setIsOpen(false);
                       }}
+                      onMouseLeave={handleMouseLeave}
                     >
                       Home
                     </a>
@@ -68,6 +75,7 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
                         setSelectedIndex1(2);
                         setIsOpen(false);
                       }}
+                      onMouseLeave={handleMouseLeave}
                     >
                       Portfolio
                     </a>
@@ -94,6 +102,7 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
                         setSelectedIndex1(3);
                         setIsOpen(false);
                       }}
+                      onMouseLeave={handleMouseLeave}
                     >
                       About Me
                     </a>
@@ -120,6 +129,7 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
                         setSelectedIndex1(4);
                         setIsOpen(false);
                       }}
+                      onMouseLeave={handleMouseLeave}
                     >
                       Hire Me
                     </a>

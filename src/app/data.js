@@ -1,7 +1,7 @@
 // this comtains the data we are gonna for AboutMe component and slider component 
 
 export const AboutData = [
-  {
+  /*{
     count: 1,
     title: "UI / UX Designer",
     img: "/first.svg",
@@ -14,75 +14,68 @@ export const AboutData = [
       "Framer",
       "Typography / Spacing / ...",
     ],
-  },
+  },*/
+
   {
-    count: 2,
-    title: "Front-end Developer",
+    count: 1,
+    title: "Front-End Tools & Frameworks",
     img: "/second.svg",
     array: [
-      "HTML / CSS3",
-      "javaScript (ES6)",
-      "ReactJS",
-      "NextJS",
-      "TailwindCSS",
+      "HTML / XHTML",
+      "CSS",
+      "JavaScript",
+      "Next.js",
+      "JSF (Java Server Faces)",
+      "JSP (Java Server Pages)",
+      "PrimeFaces",
       "Bootstrap",
-      "REST API / GraphQL",
     ],
   },
+
   {
-    count: 3,
-    title: "Back-end Developer",
+    count: 2,
+    title: "Back-End Tools & Frameworks",
     img: "/third.svg",
     array: [
-      "NodeJS / Express.js",
-      "MongoDB / MySQL / MSSQL",
-      "Next.js (API)",
-      "PHP",
-      "WordPress Theme Dev",
-      "WordPress Plugin Dev.",
-      "ASP (Once upon a time)",
+      "Python",
+      "Java",
+      "Hibernate",
+      "JDBC (Java Database Connectivity)",
+      "JNDI (Java Naming and Directory Interface)",
     ],
   },
+
   {
-    count: 4,
-    title: "DevOps and Admin",
+    count: 3,
+    title: "Application Servers",
     img: "/fourth.svg",
     array: [
-      "Docker / CI CD",
-      "Apache / Nginx",
-      "CentOS / Ubuntu",
-      "Windows Server / IIS",
-      "Mail Servers / DNS Servers",
-      "Firewalls / Security",
-      "VMWare ESXi",
+      "Jakarta",
+      "Wildfly",
+      "Apache Tomcat",
     ],
-  },
+  }, 
+
   {
-    count: 5,
-    title: "CMS and Headless CMS",
+    count: 4,
+    title: "Databases",
     img: "/fifth.svg",
     array: [
-      "Contentful",
-      "GraphCMS",
-      "Strapi",
-      "WordPress (Gutenberg)",
-      "Directus",
-      "Sanity",
-      "SiteBaan (My Own)",
+      "MySQL",
+      "Oracle SQL",
     ],
-  },
+  }, 
+
   {
-    count: 6,
-    title: "Tools and Things",
+    count: 5,
+    title: "Tools and IDEs",
     img: "/sisxth.svg",
     array: [
+      "Command-Line Tools (Bash / Powershell)",
+      "Git / GitHub",
+      "Maven",
       "VSCode",
-      "Git / Github",
-      "Bash / Powershell",
-      "NPM / Yarn",
-      "Plesk Control Panel",
-      "Vercel / Stormkit / Netlify",
-      "Postman / Insomnia",
+      "IntelliJ",
     ],
   },
 ];

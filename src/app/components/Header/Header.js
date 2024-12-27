@@ -26,6 +26,21 @@ export default function Header() {
     setIsOpen(true);
   };
 
+  const handleSmoothScroll = (event, targetId) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const offset = 100; 
+      const topPosition =
+        targetElement.getBoundingClientRect().top + window.scrollY - offset;
+
+      window.scrollTo({
+        top: topPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <React.Fragment>
       <div className={`diagonal-drawer ${isOpen ? "open" : ""}`}>
@@ -95,7 +110,7 @@ export default function Header() {
               <a
                 className={`menu-item ${selectedIndex1 === 0 ? "text-[#01161e]" : ""} text-[#01161e] group-hover:text-[#495057]`}
                 href="/#about-me-component"
-                onClick={() => selectedIndex1(3)}
+                onClick={(e) => handleSmoothScroll(e, "about-me-component")}
               >
                 About Me
               </a>
@@ -109,7 +124,7 @@ export default function Header() {
               )}
               <a
               className={`menu-item ${selectedIndex1 === 0 ? "text-[#01161e]" : ""} text-[#01161e] group-hover:text-[#495057]`}
-                href="/#about-me-component"
+                href="/#hire-me"
                  /*className={`menu-item ${isScrolled ? "text-[#01161e]" : "text-[#f5f3f4]"
                     } group-hover:text-[#495057]`} */
                 href="/#hire-me"

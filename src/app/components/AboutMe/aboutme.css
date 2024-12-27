@@ -1,0 +1,11 @@
+.fade-left{
+    transition: opacity 0.5s, transform 0.5s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-left.fade-out{
+    opacity: 0;
+    transform: translateX(40%);
+}
+
