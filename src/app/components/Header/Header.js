@@ -7,15 +7,22 @@ import '../Header/DiagonalDrawer.css'
 export default function Header() {
   const [selectedIndex1, setSelectedIndex1] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
-
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSmallDevice, setIsSmallDevice] = useState(window.innerWidth <= 640);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       setIsScrolled(scrollTop > 0);
     };
+
+    const handleResize = () => {
+      setIsSmallDevice(window.innerWidth <= 640); 
+    };
+
+
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -53,11 +60,15 @@ export default function Header() {
       </div>
       <header
         className={`${isScrolled ? "headerShow" : ""} 
-           w-full fixed top-0 z-50 h-24 transition-all duration-500`}
-        style={{
-          backgroundColor: /* isScrolled ? */ "#fff" /* : "transparent" */, 
-          boxShadow: isScrolled ? "#01161e -50px 1px 100px 10px" : "",
-        }}
+          w-full fixed top-0 z-50 h-24 transition-all duration-500`}
+       style={{
+         backgroundColor: isScrolled
+           ? "#fff"
+           : isSmallDevice
+           ? "transparent" // Transparente en dispositivos pequeños
+           : "white",   // Fondo sólido en dispositivos grandes
+         boxShadow: isScrolled ? "#01161e -50px 1px 100px 10px" : "",
+       }}
       >
 
 

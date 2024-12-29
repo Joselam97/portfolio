@@ -33,22 +33,6 @@ export default function AboutMe() {
     setSelectedIndex(null);
   };
 
-  const HandleNext = () => {
-    if (selectedIndex < 3) {
-      handleCardClick(AboutData[selectedIndex + 1], selectedIndex + 1);
-    } else {
-      handleCardClick(AboutData[0], 0);
-    }
-  };
-
-  const HandlePrev = () => {
-    if (selectedIndex !== 0) {
-      handleCardClick(AboutData[selectedIndex - 1], selectedIndex - 1);
-    } else {
-      handleCardClick(AboutData[4], 4);
-    }
-  };
-
   return (
     <React.Fragment>
       <div id="about-me-component" className="bg-[#f5f3f4] pt-[250px] mt-10 pb-[100px] lg:pb-[600px] relative lg:h-[800px]">

@@ -5,7 +5,6 @@ import { DataArray } from '../../data'
 
 
 const Portfolio =(props)=>{
-  console.log("id: ", props?.params.id)
 
   return(
     <React.Fragment>
