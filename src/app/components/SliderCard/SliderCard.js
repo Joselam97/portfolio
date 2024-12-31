@@ -9,7 +9,7 @@ export default function SliderCard({ item, index }) {
   
   return (
     <React.Fragment>
-      <div className="h-[200px] lg:h-[450px] md:h-[400px] sm:-[200px] lg:w-[650px] md:w-[450px] sma:w-[300px] w-[300px] relative m-auto">
+      <div className="h-[280px] lg:h-[450px] md:h-[400px] sm:-[200px] lg:w-[650px] md:w-[450px] sma:w-[300px] w-[300px] relative m-auto">
         <div className="h-full w-full group cursor-all-scroll z-50 relative">
           <img src={item.images[0]} alt="item thumbnail" className="w-full h-[200px] lg:h-[350px] md:h-[300px] max-w-[100%] rounded-lg" />
           <div 

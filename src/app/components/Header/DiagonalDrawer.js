@@ -13,7 +13,7 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
       <div className="relative">
         <div
           className={`z-50 ${
-            pathname === "/" ? "top-[0px]" : "top-[100px]"
+            pathname === "/" ? "top-[0px]" : "top-0"
           } cursor-pointer fixed w-14 h-14 lg:w-24 lg:h-24 bg-[#d90429] flex justify-center items-center rounded-br-3xl`}
         >
           <div onClick={() => setIsOpen(false)} className="relative w-7 lg:w-10 h-7 lg:h-10 flex justify-center items-center">
@@ -30,7 +30,8 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
         </div>
       </div>
 
-      <header className={"fixed top-0 w-full translate-all duration-500 z-40"}>
+      <header className={`fixed top-0 w-full translate-all duration-500 z-40" ${pathname === "/" ? "top-0" : "top-0"}`}
+      >
         <div className="relative">
           <div
             className="z-20 absolute transform-gpu ease-in-out duration-500 transition-all scale-100 -translate-x-none -translate-y-none opacity-100 bg-[#223740] 
@@ -122,7 +123,7 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
                 <li className="group my-4 xl:my-4 2xl:my-6 relative flex items-center justify-center">
                   <div className="inline-block relative">
                     <a
-                      href="/#hire-me"
+                      href="/page/contactme"
                       onClick={() => {
                         setSelectedIndex1(4);
                         setIsOpen(false);
@@ -154,7 +155,7 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
+                    strokeWidth="0"
                     viewBox="0 0 496 512"
                     class="w-6 h-6 sm:w-8 sm:h-8 mb-0 sm:mb-5 lg:mb-0 mx-3 sm:mx-0 lg:mx-3"
                     height="1em"
@@ -174,7 +175,7 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
+                    strokeWidth="0"
                     viewBox="0 0 448 512"
                     class="w-6 h-6 sm:w-8 sm:h-8 mb-0 sm:mb-5 lg:mb-0 mx-3 sm:mx-0 lg:mx-3"
                     height="1em"
@@ -194,7 +195,7 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
+                    strokeWidth="0"
                     viewBox="0 0 448 512"
                     class="w-6 h-6 sm:w-8 sm:h-8 mb-0 sm:mb-5 lg:mb-0 mx-3 sm:mx-0 lg:mx-3"
                     height="1em"
@@ -209,7 +210,7 @@ export default function DiagonalDrawer({ isOpen, setIsOpen, selectedIndex1, setS
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
+                    strokeWidth="0"
                     viewBox="0 0 512 512"
                     class="w-6 h-6 sm:w-8 sm:h-8 mb-0 sm:mb-5 lg:mb-0 mx-3 sm:mx-0 lg:mx-3"
                     height="1em"

@@ -15,8 +15,8 @@ export default function Footer() {
             <div className="col-span-12 lg:col-span-3">
               <div className="flex justify-center mt-5 lg:mt-0">
                 <a
-                  className="font-sans cursor-pointer px-10 py-5 bg-[#d90429] rounded-xl text-[#f5f3f4] font-medium text-lg hover:bg-[#47626d] hover:show-lg transform hover:translate-y-1"
-                  href="/#hire-me"
+                  className="font-sans cursor-pointer px-10 py-5 bg-[#d90429] rounded-xl text-[#f5f3f4] font-medium text-lg hover:bg-[#47626d] hover:show-lg transform hover:-translate-y-1"
+                  href="/page/contactme"
                 >
                   Contact Me
                 </a>

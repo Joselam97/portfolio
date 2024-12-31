@@ -8,7 +8,7 @@ export default function Header() {
   const [selectedIndex1, setSelectedIndex1] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isSmallDevice, setIsSmallDevice] = useState(window.innerWidth <= 640);
+  const [isSmallDevice, setIsSmallDevice] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,21 +33,7 @@ export default function Header() {
     setIsOpen(true);
   };
 
-  const handleSmoothScroll = (event, targetId) => {
-    event.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      const offset = 100; 
-      const topPosition =
-        targetElement.getBoundingClientRect().top + window.scrollY - offset;
-
-      window.scrollTo({
-        top: topPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
+  
   return (
     <React.Fragment>
       <div className={`diagonal-drawer ${isOpen ? "open" : ""}`}>
@@ -60,13 +46,13 @@ export default function Header() {
       </div>
       <header
         className={`${isScrolled ? "headerShow" : ""} 
-          w-full fixed top-0 z-50 h-24 transition-all duration-500`}
+          w-full fixed top-0 z-50 h-0 sm:h-24 transition-all duration-500`}
        style={{
          backgroundColor: isScrolled
            ? "#fff"
            : isSmallDevice
-           ? "transparent" // Transparente en dispositivos pequeños
-           : "white",   // Fondo sólido en dispositivos grandes
+           ? "transparent" 
+           : "white",   
          boxShadow: isScrolled ? "#01161e -50px 1px 100px 10px" : "",
        }}
       >
@@ -121,7 +107,7 @@ export default function Header() {
               <a
                 className={`menu-item ${selectedIndex1 === 0 ? "text-[#01161e]" : ""} text-[#01161e] group-hover:text-[#495057]`}
                 href="/#about-me-component"
-                onClick={(e) => handleSmoothScroll(e, "about-me-component")}
+                onClick={() => selectedIndex1(3)}
               >
                 About Me
               </a>
@@ -135,10 +121,9 @@ export default function Header() {
               )}
               <a
               className={`menu-item ${selectedIndex1 === 0 ? "text-[#01161e]" : ""} text-[#01161e] group-hover:text-[#495057]`}
-                href="/#hire-me"
                  /*className={`menu-item ${isScrolled ? "text-[#01161e]" : "text-[#f5f3f4]"
                     } group-hover:text-[#495057]`} */
-                href="/#hire-me"
+                href="/page/contactme"
                 onClick={() => selectedIndex1(4)}
               >
                 Hire Me
