@@ -1,30 +1,36 @@
+"use client";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname(); 
+
   return (
     <div id="footer">
-      <div className="bg-white pt-0 ">
-        <div className="max-w-[1140px] bg-[#01161e] rounded-xl px-[20px] sm:px-[64px] py-[64px] m-auto" style={{ transform: "translate(0px, 70px)" }}>
-          <div className="grid grid-cols-12">
-            <div className="col-span-12 lg:col-span-9">
-              <p className="text-[30px] text-[#47626d] text-center lg:text-start">Looking for a Team Player? Let's Connect</p>
-              <p className="text-[#f5f3f4] font-sans text-center lg:text-start">
-              Every successful journey starts with a conversation. Let's explore how my skills and experience can contribute to your team's success.
-              </p>
-            </div>
-            <div className="col-span-12 lg:col-span-3">
-              <div className="flex justify-center mt-5 lg:mt-0">
-                <a
-                  className="font-sans cursor-pointer px-10 py-5 bg-[#d90429] rounded-xl text-[#f5f3f4] font-medium text-lg hover:bg-[#47626d] hover:show-lg transform hover:-translate-y-1"
-                  href="/page/contactme"
-                >
-                  Contact Me
-                </a>
+      {pathname !== "/page/contactme" && ( 
+        <div className="bg-white pt-0">
+          <div className="max-w-[1140px] bg-[#01161e] rounded-xl px-[20px] sm:px-[64px] py-[64px] m-auto" style={{ transform: "translate(0px, 70px)" }}>
+            <div className="grid grid-cols-12">
+              <div className="col-span-12 lg:col-span-9">
+                <p className="text-[30px] text-[#47626d] text-center lg:text-start">Looking for a Team Player? Let's Connect</p>
+                <p className="text-[#f5f3f4] font-sans text-center lg:text-start">
+                  Every successful journey starts with a conversation. Let's explore how my skills and experience can contribute to your team's success.
+                </p>
+              </div>
+              <div className="col-span-12 lg:col-span-3">
+                <div className="flex justify-center mt-5 lg:mt-0">
+                  <a
+                    className="font-sans cursor-pointer px-10 py-5 bg-[#d90429] rounded-xl text-[#f5f3f4] font-medium text-lg hover:bg-[#47626d] hover:show-lg transform hover:-translate-y-1"
+                    href="/page/contactme"
+                  >
+                    Contact Me
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
       <footer className="bg-[#223740]">
         <div className="mx-auto max-w-screen-xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center space-x-10 mt-12">
