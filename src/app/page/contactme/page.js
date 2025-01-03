@@ -35,7 +35,7 @@ export default function page() {
 
   const handlePhoneChange = (e) => {
     const value = e.target.value;
-    const numericValue = value.replace(/[^0-9]/g, ""); 
+    const numericValue = value.replace(/[^0-9+\(\)\s\-]/g, ""); 
     setState({ ...state, phoneNumber: numericValue });
   };
 
