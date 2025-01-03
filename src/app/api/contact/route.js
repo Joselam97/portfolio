@@ -11,7 +11,7 @@ export async function POST(request) {
       host: "smtp.gmail.com",
       secure: true,
       auth: {
-        user: process.env.EMAIL_USER,
+        user: process.env.AUTH_EMAIL,
         pass: process.env.AUTH_PASS,
       },
       tls: {
@@ -20,7 +20,7 @@ export async function POST(request) {
     });
 
     const info = await transporter.sendMail({
-      from: `"${data.name}" <${process.env.EMAIL_USER}>`,
+      from: `"${data.name}" <${process.env.AUTH_EMAIL}>`,
       to: process.env.RECEIVER_EMAIL,
       replyTo: `${data.email}`,
       subject: `Inquiry from Jose's Portfolio`,
