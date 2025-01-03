@@ -1,24 +1,28 @@
 import { NextResponse } from "next/server";
 
 export async function POST(request) {
-  require("dotenv").config;
+  require("dotenv").config();
   const data = await request.json();
   let nodemailer = require("nodemailer");
 
   try {
     const transporter = nodemailer.createTransport({
-      port: 587,
-      host: "smtp.office365.com",
-      service: "hotmail",
-
+      port: 465,
+      host: "smtp.gmail.com",
+      secure: true,
       auth: {
-        user: "jlam97@hotmail.es",
-        pass: "bvefmeaddgjozyxm",
+        user: process.env.EMAIL_USER,
+        pass: process.env.AUTH_PASS,
+      },
+      tls: {
+        rejectUnauthorized: false, 
       },
     });
+
     const info = await transporter.sendMail({
-      from: `"${data.name}"`,
-      to: "jlam97@hotmail.es",
+      from: `"${data.name}" <${process.env.EMAIL_USER}>`,
+      to: process.env.RECEIVER_EMAIL,
+      replyTo: `${data.email}`,
       subject: `Inquiry from Jose's Portfolio`,
       text: "",
       html: `
@@ -67,7 +71,7 @@ export async function POST(request) {
 <body>
     <div class="email-container">
 
-        <p>edubaba digital</p>
+        <p>Message Via Portfolio</p>
         <ul>
             <li><strong>Name:</strong> ${data.name}</li>
             <li><strong>Email:</strong> ${data.email}</li>
@@ -86,7 +90,7 @@ export async function POST(request) {
     }
     return NextResponse.json({ error: true, message: "Something went wrong!" });
   } catch (e) {
-    console.log(e);
+    console.log("Error sending email:", e);
     return NextResponse.json({ error: true, message: "Something went wrong!" });
   }
 }
