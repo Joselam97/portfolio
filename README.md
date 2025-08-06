@@ -27,9 +27,15 @@ https://joselamportfolio.com/
 ## 📷 Screenshots
 
 <img width="1915" height="858" alt="Captura de pantalla 2025-08-05 202917" src="https://github.com/user-attachments/assets/181ae208-266b-4fd0-afd1-ce2ae8c58d85" />
+<img width="1883" height="845" alt="Captura de pantalla 2025-08-05 214833" src="https://github.com/user-attachments/assets/d14b1dde-a6d8-4319-b679-732e81e5bbb3" />
+<img width="1893" height="847" alt="Captura de pantalla 2025-08-05 214857" src="https://github.com/user-attachments/assets/0ef1b87d-d699-41a8-81dd-045d975f2f36" />
 
 
-## 📥 Getting Started
+
+
+
+
+## Getting Started
 
 Clone the repository:
 
